@@ -1,0 +1,42 @@
+algoritmo ordenarInteiros;
+// Síntese     Peça para que o usuário insira três números inteiros e depois apresente os mesmos em ordem crescente.
+//  Objetivo:  Ordenar Três Números Inteiros.
+//  Entrada :  Três números inteiros.
+//  Saída   :  Três números inteiros digitados em ordem crescente.
+
+
+principal
+	// Declarações
+	inteiro n1, n2, n3;
+	
+
+	// Instruções
+	leia(n1);
+	leia(n2);
+	leia(n3);
+
+		se (n1<=n2 e n2<=n3) entao
+		escreval(n1," ", n2, " ",n3);
+		senao
+			se (n1<=n3 e n3<=n2) entao
+			escreval(n1," ",n3," ",n2);
+				senao
+				se (n2<=n1 e n1<=n3) entao
+				escreval(n2," ",n1," ",n3);
+					senao
+					se (n2<=n3 e n3<=n1) entao
+					escreval(n2," ",n3," ",n1);
+						senao
+						se (n3<=n1 e n1<=n2) entao
+						escreval(n3," ",n1," ",n2);
+							senao
+							se (n3<=n2 e n2<=n1) entao
+							escreval(n3," ",n2," ",n1);
+						fimSe
+					fimSe
+				fimSe
+			fimSe
+		fimSe
+	fimSe		
+fimPrincipal
+      

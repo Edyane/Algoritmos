@@ -1,0 +1,51 @@
+algoritmo fatorial;
+// Síntese escrever um algoritmo que receba dois valores.
+//  Objetivo: calcular o fatorial por meio de uma função que recebe um valor inteiro como parâmetro e retorna o valor do fatorial.
+//  Entrada : um valor x inteiro e um valor y inteiro.
+//  Saída   : o resultado do fatorial inserido.
+
+
+principal
+	// Declarações
+	inteiro x;
+	inteiro y;
+	real soma;
+	real var;
+	real resultado;
+	real z;
+	real num;
+
+	// Instruções
+	leia (x);
+	leia (y);
+
+	soma = x + y;
+	z = fatorial(x) + fatorial(y);
+	var = raizQuadrada(z);
+	num = fatorial (soma);
+	resultado = num/var;
+
+	se (x<0) entao
+		escreval("VALOR DE X INCORRETO");
+	fimSe
+	se (y<0) entao
+		escreval("VALOR DE Y INCORRETO");
+	fimSe
+	se (x>=0 e y>=0) entao
+		escreval("RESULTADO = ", resultado::3);
+	fimSe
+fimPrincipal
+
+
+funcao inteiro fatorial (inteiro x)
+	//Declarações
+	inteiro i, resultado, n;	
+
+	// Instruções
+	resultado = 1;
+	para(i de 1 ate x passo 1) faca
+		resultado = resultado * i;
+	fimPara
+
+	retorna resultado;
+fimFuncao

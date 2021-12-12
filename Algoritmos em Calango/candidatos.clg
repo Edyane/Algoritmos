@@ -1,0 +1,40 @@
+algoritmo semNome;
+// Síntese
+//  Objetivo:
+//  Entrada :
+//  Saída   :
+
+
+principal
+	// Declarações
+	inteiro N_int;
+	inteiro i;
+	texto nome[5];
+	real nota[5];
+	real maior_nota;
+	real menor_nota; 
+
+	// Instruções
+	escreval("Digite a quantidade N de candidatos:");
+	leia(N_int);
+
+	para(i de 0 ate N_int -1 passo 1) faca
+		escreval("Digite o nome do candidato:");
+		leia(nome[i]);
+		escreval("Digite a nota do candidato:");
+		leia(nota[i]);
+	fimPara
+
+	para (i de 0 ate N_int -1 passo 1) faca
+		se(nota[i] < menor_nota) entao
+			menor_nota = nota[i];
+			maior_nota = i;
+		fimSe
+		se (nota[i] > maior_nota) entao
+			maior_nota = nota[i];
+			maior_nota = i;
+		
+
+
+
+			fimPrincipal

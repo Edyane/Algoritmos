@@ -1,0 +1,43 @@
+algoritmo serieFibonacci;
+// Síntese inserir um conjunto de N números e imprimir na tela a série de Fibonacci.
+//  Objetivo: criar um procedimento chamado de Fibonacci.
+//  Entrada : um número inteiro;
+//  Saída   : conjunto de N números inteiros positivos da série de Fibonacci.
+
+
+principal
+    // Declarações
+    inteiro num;
+
+
+    // Instruções
+    leia(num);
+    se (num <=0) entao
+        escreval ("VALOR DE N INCORRETO");
+    senao
+        fibonacci(num);
+    fimSe
+fimPrincipal 
+
+procedimento fibonacci (inteiro num)
+
+    //Declarações
+    inteiro i;
+    inteiro contador, soma_fibonacci, anterior, sucessor;
+
+    anterior = 0;
+    sucessor = 1;
+    soma_fibonacci = 1;
+
+    //Instruções
+    para (i de 1 ate num passo 1) faca
+        se(i==num) entao
+            escreval(soma_fibonacci);
+        senao
+            escreva(soma_fibonacci," ");
+            soma_fibonacci = anterior + sucessor;
+            anterior=sucessor;
+            sucessor=soma_fibonacci;
+        fimSe
+    fimPara
+fimProcedimento

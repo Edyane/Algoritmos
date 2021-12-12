@@ -1,0 +1,51 @@
+algoritmo conteudoTexto;
+// Síntese Faça um algoritmo que retorne a quantidade de: caracteres, letras maiúsculas e minúsculas, dígitos núméricos e símbolos.
+//  Objetivo: Criar um algoritmo que conte quantos caracteres, maiusculas, minusculas, numeros e simbolos foram inseridos em um texto.
+//  Entrada : Um texto.
+//  Saída   : A quantidade de caracteres, maiúculas, minúsculas, números e símbolos. 
+
+
+principal
+    // Declarações
+    texto txt;
+    inteiro contador, i;
+    inteiro tamanho,maiuscula, minuscula, numero, simbolo;
+    caracter total_caracter, total_maiuscula;
+
+    // Instruções
+    leia(txt);
+    tamanho=tamanhoTexto(txt);
+
+    maiuscula=0;
+    minuscula=0;
+    numero=0;
+    simbolo=0;
+
+    para(contador de 0 ate tamanhoTexto(txt)-1 passo 1) faca
+        total_caracter = caracterTexto (txt, contador);
+
+        se (caracterAscii(total_caracter) >=65 e caracterAscii(total_caracter)<=90) entao
+            maiuscula = maiuscula + 1;
+
+        senao
+            se (caracterAscii(total_caracter) >=97 e caracterAscii(total_caracter)<=122) entao
+                minuscula = minuscula + 1;
+
+            senao
+                se (caracterAscii(total_caracter) >=48 e caracterAscii(total_caracter)<=57) entao
+                    numero = numero + 1;
+
+                senao
+                    simbolo = simbolo + 1;
+
+                fimSe
+            fimSe
+        fimSe
+    fimPara
+
+    escreval("QUANTIDADE DE CARACTERES = ", tamanho);
+    escreval("QUANTIDADE DE MAIUSCULAS = ", maiuscula);
+    escreval("QUANTIDADE DE MINUSCULAS = ", minuscula);
+    escreval("QUANTIDADE DE NUMEROS = ", numero);
+    escreval("QUANTIDADE DE SIMBOLOS = ", simbolo);
+fimPrincipal

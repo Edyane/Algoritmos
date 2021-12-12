@@ -1,0 +1,62 @@
+algoritmo verificadorDatas;
+// Síntese fazer um algortimo que receba valores inteiros e por meio de uma função verificar se os valores correspondem a uma data existente.
+//  Objetivo: verificar se a data inserida é existente ou não.
+//  Entrada : dia, mês, ano, hora e minutos.
+//  Saída   : data correta e data incorreta.
+
+
+principal
+    // Declarações
+    inteiro dia;
+    inteiro mes;
+    inteiro ano;
+    inteiro hora;
+    inteiro minutos;
+
+    // Instruções
+    leia(dia);
+    leia(mes);
+    leia(ano);
+    leia(hora);
+    leia(minutos);
+
+    se (valida_data(dia, mes, ano, hora, minutos) == verdadeiro) entao
+        escreval("DATA CORRETA");
+    senao
+        escreval("DATA INCORRETA");
+    fimSe
+
+fimPrincipal
+
+funcao logico valida_data (inteiro dia, inteiro mes, inteiro ano, inteiro hora, inteiro minutos)
+
+    //Instruções
+    se (dia <1 ou dia >31) entao
+        retorna falso;
+    senao
+        se (mes <1 ou mes>12) entao
+            retorna falso;
+        senao
+            se (ano<0) entao
+                retorna falso;
+            senao
+                se (hora <0 ou hora >23) entao
+                    retorna falso;
+                senao
+                    se (minutos <0 ou minutos >59) entao
+                        retorna falso;
+                    senao
+                        se ((mes == 2 ou mes == 4 ou mes == 6 ou mes == 9 ou mes == 11) e dia>30) entao
+                            retorna falso;
+                        senao
+                            se (((ano%4 !=0 ou ano%100 ==0)e ano%400 !=0) e mes ==2 e dia>28) entao
+                                retorna falso;
+                            fimSe
+                        fimSe
+                    fimSe
+                fimSe
+            fimSe
+        fimSe
+    fimSe
+    retorna verdadeiro;
+fimFuncao

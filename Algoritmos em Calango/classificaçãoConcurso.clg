@@ -1,0 +1,45 @@
+algoritmo classificacaoConcurso;
+// Síntese    criar um algoritmo que receba um número inteiro N e uma sequência de N pares de nomes e notas de candidatos em um concurso.
+//  Objetivo: mostrar o nome dos candidatos ordenados pela nota que tiraram no concurso.
+//  Entrada : um número inteiro indicando a quantidade de N candidatos, o nome e a nota dos candidatos.
+//  Saída   : conjunto de N candidatos e em seguida seus nomes e respectivas notas. 
+
+
+principal
+	// Declarações
+	inteiro n;
+	inteiro quant_cand;
+	inteiro i;
+	texto nome[5];
+	real nota[5];
+	inteiro nm, nt;
+	inteiro ordenar;
+	
+
+
+	// Instruções
+	escreval("Digite a quantidade de candidatos:");
+	leia(n);
+
+	para (i de 0 ate n-1 passo 1) faca
+		//leitura da quantidade de candidatos
+		leia(nome[i]);
+		leia(nota[i];
+	fimPara
+
+	//Ordenação das notas
+	para (nt de 0 ate n-1 passo 1) faca
+		para (i de nt+1 ate n-1 passo 1) faca
+			se (quant_cand[nt]>quant_cand[i])entao
+				ordenar(quant_cand[nt],quant_cand[i]);
+			fimSe
+		fimPara
+	fimPara
+
+	para (i de 0 ate n-1 passo 1) faca
+		escreval("Nome e Nota dos Candidatos PI PI PO PO:");
+		escreval(quant_cand[i]);
+	fimPara
+
+fimPrincipal
+
